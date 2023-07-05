@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "KernelNamespaceConstants",
+  "sourceName": "@aragon/os/contracts/kernel/KernelConstants.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582085c7c67bfea9f4e5408c5deaa82feb675dbd43c0d93099a5ff6531d87ac013ea0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582085c7c67bfea9f4e5408c5deaa82feb675dbd43c0d93099a5ff6531d87ac013ea0029",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

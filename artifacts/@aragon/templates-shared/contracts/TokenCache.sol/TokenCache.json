@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "TokenCache",
+  "sourceName": "@aragon/templates-shared/contracts/TokenCache.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058206fd4d44f9afc2e22b0a7d825df9c7f5d4fcefea1c530ae35260a5cda34a54b130029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058206fd4d44f9afc2e22b0a7d825df9c7f5d4fcefea1c530ae35260a5cda34a54b130029",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,46 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ExecutionTarget",
+  "sourceName": "@aragon/contract-helpers-test/contracts/0.4/misc/ExecutionTarget.sol",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "execute",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "counter",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "counter",
+          "type": "uint256"
+        }
+      ],
+      "name": "TargetExecuted",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610107806100206000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636146195414604e57806361bc221a146062575b600080fd5b348015605957600080fd5b506060608a565b005b348015606d57600080fd5b50607460d5565b6040518082815260200191505060405180910390f35b600160008082825401925050819055507ff09544180b7f1b5ee7b24e3db36e42b6cb0bc4830c368f2ab9dd77038a9f1f376000546040518082815260200191505060405180910390a1565b600054815600a165627a7a72305820cc5702941188888a69d15e9ae1847f2e5a44ea126dac30c8854f9e9ea34eb3f30029",
+  "deployedBytecode": "0x6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636146195414604e57806361bc221a146062575b600080fd5b348015605957600080fd5b506060608a565b005b348015606d57600080fd5b50607460d5565b6040518082815260200191505060405180910390f35b600160008082825401925050819055507ff09544180b7f1b5ee7b24e3db36e42b6cb0bc4830c368f2ab9dd77038a9f1f376000546040518082815260200191505060405180910390a1565b600054815600a165627a7a72305820cc5702941188888a69d15e9ae1847f2e5a44ea126dac30c8854f9e9ea34eb3f30029",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

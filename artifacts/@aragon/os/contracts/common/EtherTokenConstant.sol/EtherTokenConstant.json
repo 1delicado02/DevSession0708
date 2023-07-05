@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "EtherTokenConstant",
+  "sourceName": "@aragon/os/contracts/common/EtherTokenConstant.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820a25a7e2472459e9d65dccf8e6c5d0819a61848faba2990b4a6e9452190b64f800029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820a25a7e2472459e9d65dccf8e6c5d0819a61848faba2990b4a6e9452190b64f800029",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ACLSyntaxSugar",
+  "sourceName": "@aragon/os/contracts/acl/ACLSyntaxSugar.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058201b218654b8b1093c207d00151bb287bf1ea345fa16d4e4a39b1b45fdfc74e17b0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058201b218654b8b1093c207d00151bb287bf1ea345fa16d4e4a39b1b45fdfc74e17b0029",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
