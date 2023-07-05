@@ -1,7 +1,11 @@
 {
   "name": "hardhat-project",
   "dependencies": {
+    "@aragon/contract-helpers-test": "^0.1.0",
+    "@aragon/minime": "^1.0.0",
     "@aragon/osx": "^1.2.0",
-    "@nomicfoundation/hardhat-toolbox": "^3.0.0"
+    "@aragon/templates-shared": "^1.0.1",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "web3": "^1.10.0"
   }
 }
