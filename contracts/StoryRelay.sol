@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/governance/extensions/GovernorTimelockControl.so
 
 contract StoryRelay is Governor, GovernorSettings, GovernorCountingSimple, GovernorVotes, GovernorVotesQuorumFraction, GovernorTimelockControl {
     constructor(IVotes _token, TimelockController _timelock)
-        Governor("MyGovernor")
+        Governor("Dao3")
         GovernorSettings(4, 50400 , 0)
         GovernorVotes(_token)
         GovernorVotesQuorumFraction(1)
@@ -29,6 +29,11 @@ contract StoryRelay is Governor, GovernorSettings, GovernorCountingSimple, Gover
     function appendStory(string memory _nextStory) public {
         story = string(abi.encodePacked(story, _nextStory));
     }
+
+    fallback() external payable {
+    }
+
+
 
 
     function votingDelay()

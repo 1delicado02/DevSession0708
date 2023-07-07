@@ -13,4 +13,6 @@ contract Token is ERC20Votes {
     ) ERC20(name, symbol) ERC20Permit("HowDAOToken") {
         _mint(msg.sender, totalSupply_);
     }
+    receive() external payable {}
+    fallback() external payable {}
 }

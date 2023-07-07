@@ -9,8 +9,8 @@ async function main() {
   const TLC = await ethers.getContractFactory('TLC');
 
   const token = await Token.deploy(
-    'Gov Token',
-    'GT',
+    'StoryRelayToken',
+    'StoryR',
     '10000000000000000000000'
   );
   const minDelay = 1;
