@@ -13,7 +13,7 @@ describe('Gov', function () {
     // ############################
     // ########## deploy ##########
     // ############################
-    const Gov = await ethers.getContractFactory('Gov');
+    const Gov = await ethers.getContractFactory('StoryRelay');
     const Token = await ethers.getContractFactory('Token');
     const TLC = await ethers.getContractFactory('TLC');
     const token = await Token.deploy(
@@ -90,6 +90,7 @@ describe('Gov', function () {
   async function propose(token, toAddress, gov) {
     const value_ = 100;
     try {
+      
       const propose_ret = await gov.propose(
         [toAddress],
         [value_],
@@ -191,10 +192,9 @@ describe('Gov', function () {
       ret = await network.provider.send('hardhat_mine', ['0x4']);
 
       // ##########################################
-      // ############## ここを変える ################
       // ##########################################
-      const support = 1; // 賛成
-      // const support = 0; // 反対
+      const support = 1; 
+      // const support = 0; 
 
       // ##############################
       // ########### castVote #########

@@ -1,8 +1,10 @@
 const { ethers } = require('hardhat');
 
 async function main() {
+  
   const [owner, otherAccount] = await ethers.getSigners();
-  const Gov = await ethers.getContractFactory('Gov');
+  
+  const Gov = await ethers.getContractFactory('StoryRelay');
   const Token = await ethers.getContractFactory('Token');
   const TLC = await ethers.getContractFactory('TLC');
 
@@ -11,10 +13,18 @@ async function main() {
     'GT',
     '10000000000000000000000'
   );
-
   const minDelay = 1;
-  const proposers = [otherAccount.address];
-  const executors = [otherAccount.address];
+  let proposers;
+  let executors;
+
+  try{
+    proposers = [otherAccount.address];
+    executors = [otherAccount.address];
+  }catch(e){
+    proposers = [owner.address];
+    executors = [owner.address]; 
+  }
+  
 
   const tlc = await TLC.deploy(minDelay, proposers, executors);
   const TokenAddress = token.address;
@@ -24,8 +34,9 @@ async function main() {
   await token.deployed();
   await gov.deployed();
   await tlc.deployed();
-
-  console.log(`deployed to ${gov.address}`);
+  console.log(`token deployed to ${token.address}`);
+  console.log(`StoryRelay deployed to ${gov.address}`);
+  console.log(`tlc deployed to ${tlc.address}`);
 }
 
 main().catch((error) => {

@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/governance/extensions/GovernorVotes.sol";
 import "@openzeppelin/contracts/governance/extensions/GovernorVotesQuorumFraction.sol";
 import "@openzeppelin/contracts/governance/extensions/GovernorTimelockControl.sol";
 
-contract Gov is Governor, GovernorSettings, GovernorCountingSimple, GovernorVotes, GovernorVotesQuorumFraction, GovernorTimelockControl {
+contract StoryRelay is Governor, GovernorSettings, GovernorCountingSimple, GovernorVotes, GovernorVotesQuorumFraction, GovernorTimelockControl {
     constructor(IVotes _token, TimelockController _timelock)
         Governor("MyGovernor")
         GovernorSettings(4, 50400 , 0)
@@ -16,6 +16,20 @@ contract Gov is Governor, GovernorSettings, GovernorCountingSimple, GovernorVote
         GovernorVotesQuorumFraction(1)
         GovernorTimelockControl(_timelock)
     {}
+
+
+    string private story;
+
+    
+    function getStory() public view returns (string memory) {
+        return story;
+    }
+
+
+    function appendStory(string memory _nextStory) public {
+        story = string(abi.encodePacked(story, _nextStory));
+    }
+
 
     function votingDelay()
         public
@@ -57,7 +71,10 @@ contract Gov is Governor, GovernorSettings, GovernorCountingSimple, GovernorVote
         public
         override(Governor, IGovernor)
         returns (uint256)
-    {
+    {   
+         bytes memory encodedFunctionCall = abi.encodeWithSignature("appendStory(string)",description);
+        calldatas[0] = encodedFunctionCall;
+        targets[0] = address(this);
         return super.propose(targets, values, calldatas, description);
     }
 
